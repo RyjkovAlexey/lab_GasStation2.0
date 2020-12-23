@@ -52,12 +52,14 @@ namespace АЗС
                 var rng = new Random();
                 pictureBoxes.ForEach(box => box.BackgroundImage = images[rng.Next(0, pictureBoxes.Count)]);
                 isOn = true;
+                button1.Text = "Остановить";
                 timer1.Enabled = true;
                 timer2.Enabled = true;
             }
             else
             {
                 isOn = false;
+                button1.Text = "Запустить";
                 timer1.Enabled = false;
                 timer2.Enabled = false;
             }
